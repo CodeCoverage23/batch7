@@ -12,7 +12,8 @@ public class DemoStaticVariables {
 		
 		byte b = 127;
 		short b1 = -128;
-		byte b = 127;
+		//short b1 = -128;
+		byte b2 = 127;
 		
 		boolean b3 = true;
 		//boolean b4 = false;
