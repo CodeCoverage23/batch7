@@ -13,6 +13,8 @@ public class DefaultValue {
 			static boolean h;
 			static char i;
 			static String r;
+   int no1=20;
+   int b1=21;
 
 			public static void main(String[] args) {
 				System.out.println("the deafault value of int is : "+a);
