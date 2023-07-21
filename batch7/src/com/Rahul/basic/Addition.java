@@ -7,7 +7,7 @@ public class Addition {
 		int a=20;
 		int b=30;
 		int c=40;
-		int d=(c-a)+b;
+		int d=(c-a)-b;
 		System.out.println("Answer"+ d);
 		
 		
