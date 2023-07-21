@@ -9,6 +9,7 @@ public class HelloJava {
 		int a = 0;
 		
 		System.out.println(a);
+		
 
 	}
 
