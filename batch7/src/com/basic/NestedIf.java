@@ -24,8 +24,12 @@ public class NestedIf {
 			
 			if (hemoglobin >= 10) {
 				System.out.println("user is fit to donate blood");
+			
+				
+				}
+			System.out.println("you are not fit to donate blood");
 		}
 	}
 
 }
-}
+	
