@@ -10,6 +10,8 @@ public class DefaultValue {
 	static boolean g;
 	static char h;
 
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("the default value of int is :" + a);
