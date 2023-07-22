@@ -10,7 +10,9 @@ public class DemoIfElse {
 			
 		System.out.println("User is Eligible for Driving Licence");
 			
-	}else {
+	}
+	 
+	 else {
 			
 		System.out.println("User is not Eligible for Driving Licence ");
 		}
