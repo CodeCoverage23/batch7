@@ -4,7 +4,7 @@ public class EvenOddNum {
 	
 	public static void main(String[] args) {
 		
-		int num = 44;
+		int num = 40;
 		 
         if (num % 2 == 0) {
  
