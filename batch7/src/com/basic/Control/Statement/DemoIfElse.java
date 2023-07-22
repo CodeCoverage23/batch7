@@ -15,7 +15,7 @@ public class DemoIfElse {
 		System.out.println("User is not Eligible for Driving Licence ");
 		}
 		
-		System.out.println("Rest of the Code");
+		System.out.println("Rest of the Part");
 	}
 
 }
