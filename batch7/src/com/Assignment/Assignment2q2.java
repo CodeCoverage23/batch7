@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class Assignment2q2 {
 
 	public static void main(String[] args) {
-		try (// TODO Auto-generated method stub
-		Scanner s = new Scanner(System.in)) {
+		// TODO Auto-generated method stub
+		Scanner s = new Scanner(System.in);
 			System.out.println("Enter your name : ");
 			String str=s.next();
 			
@@ -26,6 +26,6 @@ public class Assignment2q2 {
 
 
     
-	}
-
 }
+
+

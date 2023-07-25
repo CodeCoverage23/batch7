@@ -4,10 +4,10 @@ public class Assignment2q1 {
 	public static void main (String args[]) {
 		int a=22;
 		byte b=123;
-		float c=2;
+		float c=2.3f;
 		char d='A'; 
 		boolean e=true;
-		double f=6544;
+		double f=6544.512;
 		long g=56789;
 		short h=456;
 		

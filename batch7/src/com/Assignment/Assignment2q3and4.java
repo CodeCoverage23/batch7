@@ -8,10 +8,10 @@ public class Assignment2q3and4 {
 		// que 4 : to declare local variable as 50
 		
 		int a = 50; //declare local variable value as 50
-		char b='X'; //declare local variable as X
+		int x;
 		
 		System.out.println("a = "+a);
-		System.out.println("b = "+b);
+		//System.out.println();
 
 	}
 
