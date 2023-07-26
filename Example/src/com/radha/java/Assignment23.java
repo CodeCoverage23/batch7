@@ -8,7 +8,7 @@ public class Assignment23 {
 		int a=50;// local variable
 		char x;
 		
-		System.out.println("a="+50);
+		System.out.println(a);
 		System.out.println("x");
 	}
 
