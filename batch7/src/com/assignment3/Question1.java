@@ -9,7 +9,7 @@ public class Question1 {
 
 	public static void main(String[] args) {
 		Question1 a = new Question1();
-		String s =a.getStudentName("Swati");
+		String s=a.getStudentName("Swati");
 		
 		System.out.println(s);
 		
