@@ -1,7 +1,10 @@
 package com.Task;
 
 import java.util.Scanner;
-
+/*WAP to print 1 to 100 numbers by using any loop and print in multiple of 5 
+your name, In multiple of 7 your surname, In multiple of both 5 and 7 
+your full name.
+*/
 public class Print100num {
 
 	public static void main(String[] args) {
