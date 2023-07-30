@@ -1,4 +1,4 @@
-package com.radha.basic;
+package com.demo.basic;
 
 public class Add {
 

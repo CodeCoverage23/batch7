@@ -1,8 +1,10 @@
 package com.radha.basic;
+//Write the java program to declare the global variables as y
+//Write the java program to print the global variables value as 25
 
 public class Assignment24 {
-	int a=25;//global variable
-	char y;// declare golbal varible y
+	int a=25;//initialization
+	int y;// declare golbal varible y
 	
 
 	public static void main(String[] args) {
