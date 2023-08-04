@@ -3,12 +3,15 @@ package Assignment4;
 //that mathod nd result should be print into main method.
 
 public class Assignment41 {
- 
+	
+	public int add(int a,int b) {
+		return a+b;
+	}
 	public static void main(String[] args) {
+		Assignment41 r=new Assignment41();
+		int c = r.add(10,20);
+	
 		
-		int a =30;
-		 int b= 50;
-		 int c= a+b;
 System.out.println("Addition of two number is:"+ c);
 	}
 

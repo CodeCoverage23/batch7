@@ -1,13 +1,17 @@
 package Assignment4;
-
+//Write the java program to design method for division of two number which returns int value to that
+//method and result should be print into main method.
 public class Assignment44 {
 
+	public int div (int p,int q) {
+	return p/q;
+	
+}
 	public static void main(String[] args) {
 
-	int a= 50;
-	int b= 5;
-	int c= a/b;
-	System.out.println("Division of two number:"+c);
+		Assignment44 r=new Assignment44();
+		int s =r.div(30, 5);
+	System.out.println("Division of two number:"+s);
 }
 
 }
