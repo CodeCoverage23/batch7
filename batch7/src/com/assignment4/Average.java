@@ -13,10 +13,11 @@ public class Average {
 		int subject3=64;
 		int subject4=62;
 		int subject5=61;
-		int total_marks=0;
+		double total_marks=0;
+		double average=0;
 		total_marks=subject1+subject2+subject3+subject4+subject5;
 		System.out.println("Total marks of five subjects is:"+total_marks);
-		double average=total_marks/5;
+		average=total_marks/5;
 		System.out.println("Average is:"+average);
 		
 	}
