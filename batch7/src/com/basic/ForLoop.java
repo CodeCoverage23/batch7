@@ -13,7 +13,7 @@ public class ForLoop {
 			
 			if(evenNumber==0)
 		
-		System.out.println(i  + " is EVEN. ");
+		System.out.println(i  + "  is EVEN. ");
 		
 		
 		

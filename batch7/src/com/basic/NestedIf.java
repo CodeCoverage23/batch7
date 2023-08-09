@@ -8,7 +8,7 @@ public class NestedIf {
 
 		Scanner input = new Scanner(System.in);
 
-		System.out.println("enter your age:");
+		System.out.println(" enter your age: ");
 		int age = input.nextInt();
 		if (age >= 18) {
 			System.out.println("Now user can check weight");
