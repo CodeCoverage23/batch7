@@ -8,6 +8,7 @@ public class DailyTask1 {
 	public int addition(int a, int b) {
 		int add = a + b;
 		return add;
+		
 	}
 	public int subtraction(int c, int d) {
 		int sub = c - d;
