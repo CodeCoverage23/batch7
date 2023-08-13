@@ -1,4 +1,4 @@
-package com.Task;
+package com.TaskArray;
 //WAP to print String and int array.
 
 public class PrintArray {
@@ -32,8 +32,8 @@ String str[] = new String[5];
 		str[3]="have";
 		str[4]="patience";
 
-		
-		System.out.println("Int array is : ");
+		System.out.println();
+		System.out.println("string array is : ");
 
 		for(int i=0;i<str.length;i++) {
 			System.out.print(str[i]+ " ");
