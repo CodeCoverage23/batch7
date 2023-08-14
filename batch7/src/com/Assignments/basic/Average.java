@@ -10,8 +10,10 @@ import java.util.Scanner;
 
 public class Average {
 	
-	public static float avg(int a,int b, int c, int d, int e) {
-		float averageofsubjects=(a+b+c+d+e)/5;
+	public static float avg(float maths, float science,  float english, float hindi,  float EVS) {
+		float total= maths+science+english+hindi+EVS;
+	    float averageofsubjects=total/5;
+	          //System.out.println(total);
 		return averageofsubjects;
 		
 	}
@@ -20,7 +22,7 @@ public class Average {
 		
 		
 		int math,science,english,hindi,EVS;
-		float averageofsubjects;
+		float averageofsubjects,total;
 		
 		Scanner maths=new Scanner(System.in);
 		System.out.println("enter marks of maths");
@@ -41,6 +43,11 @@ public class Average {
 		Scanner EVS1=new Scanner(System.in);
 		System.out.println("enter marks of EVS");
 		EVS= EVS1.nextInt();
+		
+	    total = math+science+english+hindi+EVS;
+		
+        System.out.println(total);
+
 		
 		averageofsubjects= avg(math,science,english,hindi,EVS);
 		
