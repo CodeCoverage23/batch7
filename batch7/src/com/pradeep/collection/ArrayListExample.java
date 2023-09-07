@@ -1,11 +1,12 @@
 package com.pradeep.collection;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ArrayListExample {
 
 	public static void main(String[] args) {
-		ArrayList<Integer> list=new ArrayList<>();
+		List<Integer> list=new ArrayList<>();
 		list.add(10);
 		list.add(15);
 		list.add(30);
@@ -25,7 +26,6 @@ public class ArrayListExample {
 	   list2.addAll(9, list);
 	   System.out.println(list2);
 		System.out.println(list2.size());
-		
 		
 	}
 
