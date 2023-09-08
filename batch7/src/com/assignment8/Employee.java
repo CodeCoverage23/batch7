@@ -2,13 +2,13 @@ package com.assignment8;
 
 public class Employee
 {
-
+    //Variables declaration
 	String firstname, lastname, city;
 	static String country;
      
 	long mobilenumber;
 	
-	
+	//Constructor1
 	public Employee(String firstname, String lastname, String city, long mobilenumber)
 	{
 	
@@ -20,11 +20,13 @@ public class Employee
 	
 	
 	}
+	//constructor 2 for static variable  country
 	public Employee(String country) 
 	{
 		this.country= country;
 	}
 	@Override
+	//Displaying output
 	public String toString()
 	{
 
