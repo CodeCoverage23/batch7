@@ -22,10 +22,13 @@ public class CheckCharacter1
 		{
 			System.out.println(c+" is a digit");
 		}
+		 //else if(c>=33 && c<=47)
 		else
+	
 		{
 			System.out.println(c+" is a special symbol");
 		}
+		
 			
 		
 	}

@@ -6,9 +6,10 @@ import java.util.Scanner;
 
 public class CubeDemo2
 {
-	public  static int getNumberCube(int num)
+	
+	public static  int getNumberCube(int num)
 	{
-		
+	
 		return num*num*num;
 	}
 

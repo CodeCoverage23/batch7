@@ -1,11 +1,19 @@
 //Java Program to Dispaly even,odd numbers from 1to 100;
 package com.task;
 
+import java.util.Scanner;
+
 public class EvenOddNumberTill100 {
 
 	public static void main(String[] args)
 	{
-		for(int i=1;i<=100;i++)
+		Scanner sc=new Scanner(System.in);
+		System.out.println("sum from:");
+		int i=sc.nextInt();
+		System.out.println("sum upto:");
+		int num=sc.nextInt();
+		for(;i<=num;i++)
+	
 		{
 			if(i%2==0)
 			{

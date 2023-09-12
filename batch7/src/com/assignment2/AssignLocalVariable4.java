@@ -1,3 +1,5 @@
+//4. Write the java program to assign local variable value as 50.
+
 package com.assignment2;
 
 public class AssignLocalVariable4 {

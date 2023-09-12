@@ -9,9 +9,9 @@ public class StringReverse {
 	{
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter a string");
-		String str=sc.next();
+		String str=sc.nextLine();
 		System.out.println("Original String:"+str);
-		String reverse=" ";
+		String reverse="";
 		for(int i=str.length()-1;i>=0;i--)
 		{
 			reverse=reverse+str.charAt(i);

@@ -1,5 +1,7 @@
 package com.task;
 
+import java.util.Scanner;
+
 public class StudentDemo 
 {
 
@@ -15,6 +17,7 @@ public class StudentDemo
 		name = name1;
 		address = address1;
 		rollNumber++;
+		
 		
 	}
 
@@ -41,7 +44,10 @@ public class StudentDemo
 	public static void main(String[] args) 
 	{
 		changeValue();
-		StudentDemo s1=new StudentDemo("john","pune");
+		Scanner sc=new Scanner(System.in);
+		String nm=sc.next();
+		String addr=sc.next();
+		StudentDemo s1=new StudentDemo(nm,addr);
 		s1.display();
 		
 		

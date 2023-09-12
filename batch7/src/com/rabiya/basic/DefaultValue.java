@@ -16,7 +16,9 @@ public class DefaultValue {
    int no1=20;
    int b1=21;
 
-			public static void main(String[] args) {
+			public static void main(String[] args) 
+			{
+				int x;
 				System.out.println("the deafault value of int is : "+a);
 				System.out.println("the deafault value of byte is : "+b);
 				System.out.println("the deafault value of short is : "+c);
@@ -26,7 +28,7 @@ public class DefaultValue {
 				System.out.println("the deafault value of boolean is : "+h);
 				System.out.println("the deafault value of char is : "+i);
 				System.out.println("the deafault value of String is : "+r);
-			
+			  
 			
 			}
 

@@ -9,12 +9,13 @@ public class PalindromeNumbertill500 {
 		
 		
 			Scanner sc = new Scanner(System.in);
-			System.out.println("Enter the Palindrome number:");
+			System.out.println("Enter the number:");
 			int num = sc.nextInt();
-			System.out.print("Palindrome numbers from 1 to "+num+": ");
-			int num2, rem, rev = 0;
+			//System.out.print("Palindrome numbers from 1 to "+num+": ");
+			int num2, rem,rev;
 			for (int i = 1; i<=num; i++)
 			{
+				rev = 0;
 				num2 = i;
 				while (num2 > 0)
 				{
@@ -24,9 +25,15 @@ public class PalindromeNumbertill500 {
 				}
 				if (rev == i)
 				{
-					System.out.print(rev + " ");
+					System.out.print("Palindrome numbers is :");
+					System.out.println(+i + " ");
 				}
-				rev = 0;
+				if (rev != i)
+				{
+					System.out.print("non-Palindrome numbers are:");
+					System.out.println(+i+ " ");
+				}
+				
 			}
 		}
 			

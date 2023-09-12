@@ -1,3 +1,5 @@
+//5. Write the Java Program to declare the global variables as y
+
 package com.assignment2;
 
 public class GlobalVariableDeclare {
