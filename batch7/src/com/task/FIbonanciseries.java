@@ -17,9 +17,10 @@ public class FIbonanciseries
 		for (int i = 2; i < num; i++)
 		{
 			int next = n01 + n02;
-			System.out.print(" " + next);
+			//System.out.print(" " + next);
 			n01 = n02;
 			n02 = next;
+			System.out.print(" " + next);
 
 		}
 

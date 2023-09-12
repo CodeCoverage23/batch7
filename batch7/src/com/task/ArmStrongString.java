@@ -8,6 +8,7 @@ public class ArmStrongString {
 	{
 		
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number");
 		String s = sc.next();
 		int len = s.length();
 		char c;
@@ -17,6 +18,7 @@ public class ArmStrongString {
 			c = s.charAt(i);
             // convert ascii value to integer
             int num = Character.getNumericValue(c);
+            //calculting power
             arm = (int) (arm + Math.pow(num, len));
          }
 		String arm1 = Integer.toString(arm);
