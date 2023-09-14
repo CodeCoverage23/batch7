@@ -5,7 +5,6 @@ package com.pradeep.java8;
 	 
  }
 
-
 public class LamdaExample  {
 	
 	public static void main(String[] args) {
