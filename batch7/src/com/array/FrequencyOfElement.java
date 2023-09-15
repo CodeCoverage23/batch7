@@ -16,6 +16,7 @@ public class FrequencyOfElement {
             strArray[i] = String.valueOf(arr[i]);
         }
         //displaying sting array element
+        
         for(String s:strArray)
         {
         	System.out.print(s+" "+"\n");
