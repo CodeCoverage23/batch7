@@ -33,6 +33,7 @@ public class EmployeeInformation
 			firstname = sc.next();
 			System.out.println("Enter student Lastname");
 			lastname = sc.next();
+			
 			System.out.println("Enter student city");
 			city = sc.next();
 			System.out.println("Enter student mobilenumber");
