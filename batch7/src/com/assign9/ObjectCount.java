@@ -1,4 +1,5 @@
 package com.assign9;
+// Write the Java program in which create the multiple objects and display the count of number of objects created into class.
 
 public class ObjectCount {
 	static int count;
