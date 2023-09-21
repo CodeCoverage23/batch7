@@ -1,7 +1,9 @@
 package com.pradeep.java8;
 
 import java.util.ArrayList;
+import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class FunctionEx {
 
@@ -23,13 +25,18 @@ public class FunctionEx {
 			else grade="Failed" ;
 			return grade;
 		}; 
-		for(Students s1:list) {
-			System.out.println("student Id : "+s1.id);
-			System.out.println("Student Name : "+s1.name);
-			System.out.println("student marks : "+s1.marks);
-			System.out.println("student Grade : "+f.apply(s1));
+		Predicate<Students> p=(s3)->s3.marks>=60;
+		Consumer<Students> c = (s1) -> {
+			System.out.println("student Id : " + s1.id);
+			System.out.println("Student Name : " + s1.name);
+			System.out.println("student marks : " + s1.marks);
+			System.out.println("student Grade : " + f.apply(s1));
 			System.out.println();
-				
-	}
+		};
+		
+		for(Students s2:list) {
+			if(p.test(s2)) {
+			c.accept(s2);	
+			}}
 
 }}
