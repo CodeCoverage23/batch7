@@ -1,9 +1,12 @@
 package com.stream;
 
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamDemo {
 
@@ -36,6 +39,35 @@ public class StreamDemo {
 
 	   List<String> liststr=Arrays.asList("abc",null,"defg",null," xcv");
 	   liststr.stream().filter(e->e!=null && e.length()>3).collect(Collectors.toList()).forEach(System.out::println);
+	   
+	   
+	   Stream<Integer> s1=Stream.of(1,4,6,7,8,4,5,3);
+	    s1.forEach(System.out::println);
+	   
+	    Collection<String> collection=Arrays.asList("rabiya","java","cpp");
+	    //convert collection into stream
+	    Stream<String> stream=collection.stream();
+	    stream.forEach(System.out::println);
+	    
+	    
+	    List<String> list2=Arrays.asList("rabiya","java","cpp","cpp");
+	    //convert list into stream
+	    Stream<String> stream1=list2.stream();
+	    stream1.forEach(System.out::println);
+	    
+	    System.out.println("---Set---");
+	    Set<String> e=new HashSet<String>(list2);
+	    //convert list into stream
+	    Stream<String> stream11=e.stream();
+	    stream11.forEach(System.out::println);
+	    
+	    System.out.println("---Arrays---");
+	    String[]strarr= {"abc","jhm","iop","ggg","abc"};
+	    Stream<String> stream2=Arrays.stream(strarr);
+	    stream2.forEach(System.out::println);
+	    
+	    
+	    
 
 	}
 
