@@ -17,7 +17,7 @@ public class PredicateJoining {
 		System.out.println(list);
 		Predicate<Employee> p1 = e -> e.empSalary > 30000;
 		Predicate<Employee> p2 = e -> e.empSalary % 2 == 0;
-     // And function 
+//      And function 
 //		for (Employee s : list) {
 //			if (p1.and(p2).test(s)) {
 //				System.out.println(s);
@@ -39,6 +39,6 @@ public class PredicateJoining {
 
 				}
 		
-		}
-	}
+//		}
+			}}
 }

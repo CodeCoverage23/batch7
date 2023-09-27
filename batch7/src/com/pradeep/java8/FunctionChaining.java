@@ -11,9 +11,6 @@ public class FunctionChaining {
 		
 	System.out.println(	f1.andThen(f2).apply(10));
 	System.out.println(f1.compose(f2).apply(10));
-		
-		
-		
 	}
 
 }
