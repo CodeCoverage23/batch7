@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class MethodCall {
 
-	public int add(int a, int b) {
+	public static int add(int a, int b) {
 		int c=a+b;
+		System.out.println("addition :"+c);
 		return c;
 	}
 	public int sub(int num1,int num2) {
 		int sub=num2-num1;
+		System.out.println("substraction :"+sub);
 		return sub;
 	}
 	public int mul(int d, int s) {
