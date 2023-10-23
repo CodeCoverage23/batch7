@@ -16,8 +16,8 @@ public class BankController {
 
 	@PostMapping("addbank")
 	public String createBank(@RequestBody BankDetailsDto bankDetailsDto) {
-
-		return null;
+		String response = bankService.createBank(bankDetailsDto);
+		return response;
 	}
 
 }

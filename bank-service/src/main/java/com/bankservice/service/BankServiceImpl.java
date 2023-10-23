@@ -13,13 +13,15 @@ import lombok.extern.log4j.Log4j2;
 @Log4j2
 public class BankServiceImpl implements BankService {
 
+	private static final String SUCCESFULLY_SAVED = "Succesfully Saved";
+	
 	@Autowired
 	private BankRepository bankRepository;
 	
 	@Override
 	public String createBank(BankDetailsDto bankDetailsDto) {
 		log.info("createBank mehtod Started");
-		log.debug("Bank Details DTO : {}", bankDetailsDto);
+		log.info("Bank Details DTO : {}", bankDetailsDto);
 		BankEntity entity =  BankEntity.builder()
 				.bankName(bankDetailsDto.getBankName())
 				.bankAddress(bankDetailsDto.getBankAddress())
@@ -29,7 +31,7 @@ public class BankServiceImpl implements BankService {
 		bankRepository.save(entity);
 		
 		log.info("createBank method Ended");
-		return null;
+		return SUCCESFULLY_SAVED;
 	}
 
 }
