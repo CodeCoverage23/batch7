@@ -1,11 +1,17 @@
 package com.bankservice.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bankservice.dto.BankDetailsDto;
+import com.bankservice.entity.BankEntity;
 import com.bankservice.service.BankService;
 
 @RestController
@@ -18,6 +24,16 @@ public class BankController {
 	public String createBank(@RequestBody BankDetailsDto bankDetailsDto) {
 		String response = bankService.createBank(bankDetailsDto);
 		return response;
+	}
+
+	@GetMapping("banks")
+	public List<BankEntity> getAllBanks() {
+		return bankService.getAllBanks();
+	}
+
+	@GetMapping("/bank/{id}")
+	public BankDetailsDto getBankById(@PathVariable int id) {
+		return bankService.getBankById(id);
 	}
 
 }
