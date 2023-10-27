@@ -12,4 +12,8 @@ public interface BankService {
 	List<BankEntity> getAllBanks();
 
 	BankDetailsDto getBankById(int bankId);
+
+	BankDetailsDto updateBank(int bankId, BankDetailsDto bankDetailsDto);
+	
+	
 }

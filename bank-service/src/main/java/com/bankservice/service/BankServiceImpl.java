@@ -86,4 +86,23 @@ public class BankServiceImpl implements BankService {
 		return bankdto;
 	}
 
+	@Override
+	public BankDetailsDto updateBank(int bankId, BankDetailsDto bankDetailsDto) {
+		log.info("updateBank method started");
+		BankEntity entity = bankRepository.findById(Integer.valueOf(bankId)).orElse(null);
+
+		log.info("Entity : {}", entity);
+		entity.setBankAddress(bankDetailsDto.getBankAddress());
+		entity.setBankName(bankDetailsDto.getBankName());
+		entity.setBankCode(bankDetailsDto.getBankCode());
+		entity.setBankIFSC(bankDetailsDto.getBankIFSC());
+
+		BankEntity updatedEntity = bankRepository.save(entity);
+
+		bankDetailsDto.setId(updatedEntity.getId());
+
+		log.info("updateBank method ended");
+		return bankDetailsDto;
+	}
+
 }
