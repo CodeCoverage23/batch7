@@ -19,8 +19,17 @@ public class Student {
 	@Column(name="student_city",nullable = false,length = 255)
 	private String city;
 	
+	private Certificate certi;
+	
+	public Certificate getCerti() {
+		return certi;
+	}
+
+	public void setCerti(Certificate certi) {
+		this.certi = certi;
+	}
+
 	public Student(int id, String name, String city) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.city = city;
