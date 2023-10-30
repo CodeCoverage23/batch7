@@ -1,11 +1,14 @@
 package com.student.management.Controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,5 +44,28 @@ public ResponseEntity<List<Students>> fetchStudentsFromDb(){
 	ResponseEntity<List<Students>> fetchAllStudent = studentservice.fetchAllStudent();
  return fetchAllStudent;	
 }
+
+
+//get by id
+
+@GetMapping("/get/{Id}")
+public ResponseEntity<Optional<Students>> fetchStudentById(@PathVariable Integer Id)
+{
+	ResponseEntity<Optional<Students>> fetchDataById = studentservice.fetchDataById(Id);
+	
+	return fetchDataById;
+	
+}
+
+
+@PatchMapping("update/{Id}")
+public ResponseEntity<Students> updateStudent(@RequestBody StudentDto dto,@PathVariable Integer Id)
+{
+	ResponseEntity<Students> updateStudent = studentservice.updateStudent(dto, Id);
+	return updateStudent;
+}
+
+
+
 	
 }
