@@ -26,22 +26,34 @@ public class BankController {
 	@Autowired
 	private BankService bankService;
 
+	/*
+	 * This is Add bank API
+	 */
 	@PostMapping("addbank")
 	public String createBank(@RequestBody BankDetailsDto bankDetailsDto) {
 		String response = bankService.createBank(bankDetailsDto);
 		return response;
 	}
 
+	/*
+	 * This is get all Bank API
+	 */
 	@GetMapping("banks")
 	public List<BankEntity> getAllBanks() {
 		return bankService.getAllBanks();
 	}
 
+	/*
+	 * This is Get bank by ID
+	 */
 	@GetMapping("/bank/{id}")
-	public BankDetailsDto getBankById(@PathVariable int id) {
+	public BankDetailsDto getBankById(@PathVariable int id) throws Exception {
 		return bankService.getBankById(id);
 	}
 
+	/*
+	 * This is update API
+	 */
 	@PutMapping("/bank/{id}")
 	public ResponseEntity<BankDetailsDto> updateBank(@PathVariable int id, @RequestBody BankDetailsDto bankDetailsDto) {
 		BankDetailsDto dto = bankService.updateBank(id, bankDetailsDto);
@@ -49,6 +61,9 @@ public class BankController {
 		return new ResponseEntity<>(dto, HttpStatus.ACCEPTED);
 	}
 
+	/*
+	 * THis is Delete API
+	 */
 	@DeleteMapping("bank/{id}")
 	public ResponseEntity<String> deleteBankById(@PathVariable int id) {
 		bankService.deleteBankById(id);

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.bankservice.dto.BankDetailsDto;
 import com.bankservice.entity.BankEntity;
+import com.bankservice.exception.BankServiceException;
 import com.bankservice.repository.BankRepository;
 
 import lombok.extern.log4j.Log4j2;
@@ -65,14 +66,15 @@ public class BankServiceImpl implements BankService {
 	}
 
 	@Override
-	public BankDetailsDto getBankById(int bankId) {
+	public BankDetailsDto getBankById(int bankId) throws BankServiceException {
 		log.info("getBankById method Started");
 
 		BankEntity entity = bankRepository.findById(Integer.valueOf(bankId)).orElse(null);
 		BankDetailsDto bankdto = new BankDetailsDto();
 
 		if (entity == null) {
-			return bankdto;
+			log.warn("This bank Id is not available In database : {}", bankId);
+			throw new BankServiceException("101", "Invalid Database Id");
 		}
 
 		bankdto.setId(entity.getId());

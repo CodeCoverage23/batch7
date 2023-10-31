@@ -19,7 +19,7 @@ public interface BankService {
 	 */
 	List<BankEntity> getAllBanks();
 
-	BankDetailsDto getBankById(int bankId);
+	BankDetailsDto getBankById(int bankId) throws Exception;
 
 	/**
 	 * This method is used to update the bank in DB
