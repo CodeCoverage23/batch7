@@ -105,4 +105,10 @@ public class BankServiceImpl implements BankService {
 		return bankDetailsDto;
 	}
 
+	@Override
+	public void deleteBankById(int id) {
+		Integer intergerValue = Integer.valueOf(id);
+		bankRepository.deleteById(intergerValue);
+	}
+
 }
