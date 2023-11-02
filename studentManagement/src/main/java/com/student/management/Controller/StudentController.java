@@ -1,12 +1,12 @@
 package com.student.management.Controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.student.management.Dto.StudentDto;
+import com.student.management.Dto.StudentFilter;
 import com.student.management.Entity.Students;
 import com.student.management.service.StudentService;
 
@@ -49,9 +50,9 @@ public ResponseEntity<List<Students>> fetchStudentsFromDb(){
 //get by id
 
 @GetMapping("/get/{Id}")
-public ResponseEntity<Optional<Students>> fetchStudentById(@PathVariable Integer Id)
+public ResponseEntity<Students> fetchStudentById(@PathVariable Integer Id)
 {
-	ResponseEntity<Optional<Students>> fetchDataById = studentservice.fetchDataById(Id);
+	ResponseEntity<Students> fetchDataById = studentservice.fetchDataById(Id);
 	
 	return fetchDataById;
 	
@@ -65,7 +66,21 @@ public ResponseEntity<Students> updateStudent(@RequestBody StudentDto dto,@PathV
 	return updateStudent;
 }
 
-
-
+@DeleteMapping("delete/{Id}")
+public ResponseEntity<String> deleteStudent(@PathVariable Integer Id)
+{
+	ResponseEntity<String> deleteStudentById = studentservice.deleteStudentById(Id);
 	
+	
+	return deleteStudentById;
+}
+
+
+@GetMapping("name/{studentName}")
+	public ResponseEntity<List<Students>> fetchStudentsByName(@PathVariable("studentName") String name,@ModelAttribute StudentFilter filter )
+	{
+	ResponseEntity<List<Students>> fetchStudentWithName = studentservice.fetchStudentWithName(name, filter);
+	
+	return fetchStudentWithName;
+	}
 }
