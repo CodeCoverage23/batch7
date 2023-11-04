@@ -43,8 +43,7 @@ public class StudentServiceImpl implements StudentService {
 	public ResponseEntity<List<Students>> fetchAllStudent() {
 		List<Students> findAll = repo.findAll();
 		return new ResponseEntity<>(findAll, HttpStatus.OK);
-	}
-
+	}	
 	@Override
 	public ResponseEntity<Students> fetchDataById(Integer Id) {
 		Students findById = repo.findById(Id)
@@ -52,6 +51,8 @@ public class StudentServiceImpl implements StudentService {
 		;
 		return new ResponseEntity<Students>(findById, HttpStatus.OK);
 	}
+
+
 
 	@Override
 	public ResponseEntity<Students> updateStudent(StudentDto dto, Integer Id) {
