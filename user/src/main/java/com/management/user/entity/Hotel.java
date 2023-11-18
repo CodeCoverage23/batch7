@@ -12,12 +12,12 @@ import lombok.Setter;
 public class Hotel {
 private String hotelId;
 private String hotelName;
-private String location;
+private String hotelLocation;
 private String about;
 @Override
 public String toString() {
-	return "Hotel [hotelId=" + hotelId + ", hotelName=" + hotelName + ", location=" + location + ", about=" + about
-			+ "]";
+	return "Hotel [hotelId=" + hotelId + ", hotelName=" + hotelName + ", hotelLocation=" + hotelLocation + ", about="
+			+ about + "]";
 }
 	
 	

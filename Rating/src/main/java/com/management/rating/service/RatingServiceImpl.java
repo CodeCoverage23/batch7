@@ -50,9 +50,9 @@ public class RatingServiceImpl implements RatingService {
 	@Override
 	public ResponseEntity<RatingEntity> updateRatingById(RatingEntity entity, String ratingId) {
 		RatingEntity response = repo.findById(ratingId).orElseThrow(()-> new ResourceNotFoundException("rating with given id is not present : "+ratingId));
-		response.setRatingId(ratingId);
+//		response.setRatingId(ratingId);
 		response.setUserId(entity.getUserId());
-		RatingEntity save = repo.save(entity);
+		RatingEntity save = repo.save(response);
 		return new ResponseEntity<RatingEntity>(save,HttpStatus.CREATED);
 	}
 

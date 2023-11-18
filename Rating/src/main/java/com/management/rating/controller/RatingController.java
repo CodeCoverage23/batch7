@@ -43,12 +43,12 @@ public class RatingController {
 	
 	@GetMapping("/hotel/{hotelId}")
 	public ResponseEntity<List<RatingEntity>> fetchHotelId(@PathVariable String hotelId){
-		return service.getRatingByUserId(hotelId);
+		return service.getRatingByHotelId(hotelId);
 	}	
 	
 	@PatchMapping("/update/{ratingId}")
 	public ResponseEntity<RatingEntity> updateRating(@RequestBody RatingEntity entity,@PathVariable String ratingId){
-		return null;
+		return service.updateRatingById(entity, ratingId);
 		
 		
 		
